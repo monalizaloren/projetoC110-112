@@ -10,8 +10,8 @@
 
 Webcam.attach( '#camera' );
 
-      
-function take_snapshot()
+      //Crie uma função que se chama 'take_snapshot'
+???
 {
     Webcam.snap(function(data_uri) {
         document.getElementById("result").innerHTML = '<img id="captured_image" src="'+data_uri+'"/>';
@@ -19,12 +19,13 @@ function take_snapshot()
 }
 
   console.log('ml5 version:', ml5.version);
-  
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/HAyrcwhmE/model.json',modelLoaded);
 
-  function modelLoaded() {
-    console.log('Model Loaded!');
-  }
+//Coloque o link do seu teacheble machine
+classifier = ml5.imageClassifier('??????/model.json',modelLoaded);
+
+//crie a função 'modelLoaded' em que o objetivo dessa função é mostrar no console o texto 'Model Loaded!'
+
+
       
   function check()
   {
@@ -32,7 +33,8 @@ classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models
     classifier.classify(img, gotResult);
   }
 
-function gotResult(error, results) {
+//Coloque os parametros 'error, results' na função abaixo
+function gotResult(????, ???) {
   if (error) {
     console.error(error);
   } else {
